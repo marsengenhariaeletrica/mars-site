@@ -1022,6 +1022,12 @@
       <a href="#contato" class="servico-link">Solicitar orçamento →</a>
     </div>
     <div class="servico-card">
+      <span class="servico-icon">📷</span>
+      <h3>Câmeras de Segurança</h3>
+      <p>Instalação e configuração de sistemas CFTV e câmeras IP para residências, comércios e indústrias. Monitoramento remoto 24h.</p>
+      <a href="#contato" class="servico-link">Solicitar orçamento →</a>
+    </div>
+    <div class="servico-card">
       <span class="servico-icon">🔨</span>
       <h3>Reformas e Acabamentos</h3>
       <p>Reformas completas ou parciais, revestimentos, pintura, forro e acabamentos de alto padrão.</p>
@@ -1054,6 +1060,7 @@
     <button class="filter-btn active" onclick="filterPortfolio('todos', this)">Todos</button>
     <button class="filter-btn" onclick="filterPortfolio('eletrica', this)">Elétrica</button>
     <button class="filter-btn" onclick="filterPortfolio('hidraulica', this)">Hidráulica</button>
+    <button class="filter-btn" onclick="filterPortfolio('cameras', this)">Câmeras</button>
     <button class="filter-btn" onclick="filterPortfolio('reforma', this)">Reformas</button>
     <button class="filter-btn" onclick="filterPortfolio('projeto', this)">Projetos</button>
   </div>
@@ -1062,7 +1069,6 @@
 
     <!-- Item 1 — Grande destaque -->
     <div class="portfolio-item large" data-categoria="eletrica">
-      <!-- INSTRUÇÃO: substitua o bloco abaixo pela tag <img> com sua foto -->
       <div class="portfolio-placeholder">
         <span class="portfolio-placeholder-icon">⚡</span>
         <span class="portfolio-placeholder-text">Adicione uma foto do projeto aqui</span>
@@ -1106,7 +1112,52 @@
       </div>
     </div>
 
-    <!-- Item 4 -->
+    <!-- Item 4 — Câmeras Grande destaque -->
+    <div class="portfolio-item large" data-categoria="cameras">
+      <div class="portfolio-placeholder">
+        <span class="portfolio-placeholder-icon">📷</span>
+        <span class="portfolio-placeholder-text">Adicione uma foto do projeto aqui</span>
+        <span class="portfolio-placeholder-tag">Câmeras de Segurança</span>
+      </div>
+      <div class="portfolio-overlay">
+        <div class="portfolio-overlay-content">
+          <h4>Sistema CFTV Completo</h4>
+          <span>Comercial · São Bernardo do Campo</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Item 5 — Câmeras -->
+    <div class="portfolio-item" data-categoria="cameras">
+      <div class="portfolio-placeholder">
+        <span class="portfolio-placeholder-icon">📷</span>
+        <span class="portfolio-placeholder-text">Adicione uma foto do projeto aqui</span>
+        <span class="portfolio-placeholder-tag">Câmeras de Segurança</span>
+      </div>
+      <div class="portfolio-overlay">
+        <div class="portfolio-overlay-content">
+          <h4>Monitoramento Residencial</h4>
+          <span>Residencial · São Bernardo do Campo</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Item 6 — Câmeras -->
+    <div class="portfolio-item" data-categoria="cameras">
+      <div class="portfolio-placeholder">
+        <span class="portfolio-placeholder-icon">📷</span>
+        <span class="portfolio-placeholder-text">Adicione uma foto do projeto aqui</span>
+        <span class="portfolio-placeholder-tag">Câmeras de Segurança</span>
+      </div>
+      <div class="portfolio-overlay">
+        <div class="portfolio-overlay-content">
+          <h4>Câmeras IP Industrial</h4>
+          <span>Industrial · São Bernardo do Campo</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Item 7 -->
     <div class="portfolio-item" data-categoria="reforma">
       <div class="portfolio-placeholder">
         <span class="portfolio-placeholder-icon">🔨</span>
@@ -1121,7 +1172,7 @@
       </div>
     </div>
 
-    <!-- Item 5 — Grande destaque -->
+    <!-- Item 8 — Projeto Grande destaque -->
     <div class="portfolio-item large" data-categoria="projeto">
       <div class="portfolio-placeholder">
         <span class="portfolio-placeholder-icon">📐</span>
@@ -1136,7 +1187,7 @@
       </div>
     </div>
 
-    <!-- Item 6 -->
+    <!-- Item 9 -->
     <div class="portfolio-item" data-categoria="hidraulica">
       <div class="portfolio-placeholder">
         <span class="portfolio-placeholder-icon">🔧</span>
@@ -1151,22 +1202,7 @@
       </div>
     </div>
 
-    <!-- Item 7 -->
-    <div class="portfolio-item" data-categoria="reforma">
-      <div class="portfolio-placeholder">
-        <span class="portfolio-placeholder-icon">🔨</span>
-        <span class="portfolio-placeholder-text">Adicione uma foto do projeto aqui</span>
-        <span class="portfolio-placeholder-tag">Reforma</span>
-      </div>
-      <div class="portfolio-overlay">
-        <div class="portfolio-overlay-content">
-          <h4>Reforma Completa</h4>
-          <span>Comercial · São Bernardo do Campo</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Item 8 -->
+    <!-- Item 10 -->
     <div class="portfolio-item" data-categoria="projeto">
       <div class="portfolio-placeholder">
         <span class="portfolio-placeholder-icon">🔍</span>
@@ -1329,8 +1365,12 @@
     <div id="formSucesso" style="display:none; text-align:center; padding:2rem 1rem;">
       <div style="font-size:3rem; margin-bottom:1rem;">✅</div>
       <h4 style="font-family:'Barlow Condensed',sans-serif; font-size:1.5rem; font-weight:800; text-transform:uppercase; color:#2C2C2C; margin-bottom:0.5rem;">Solicitação Enviada!</h4>
-      <p style="color:#4A4A4A; font-size:0.95rem; line-height:1.7;">Recebemos seu pedido de orçamento.<br>Nossa equipe entrará em contato em até <strong>24 horas</strong>.</p>
-      <a href="https://wa.me/5511964563416?text=Olá!%20Acabei%20de%20enviar%20o%20formulário%20e%20gostaria%20de%20falar%20sobre%20meu%20projeto." target="_blank" class="btn-primary" style="margin-top:1.5rem; display:inline-flex;">💬 Falar agora no WhatsApp</a>
+      <p style="color:#4A4A4A; font-size:0.95rem; line-height:1.7; margin-bottom:1.5rem;">Seu pedido foi registrado e enviado para nossa equipe.<br>Clique abaixo para continuar pelo WhatsApp e agilizar seu atendimento!</p>
+      <a id="btnWhatsAppSucesso" href="#" target="_blank" class="btn-form" style="display:inline-flex; text-decoration:none; width:auto; padding:1rem 2rem; border-radius:3px; background:#25D366; margin-bottom:0.75rem;">
+        💬 Continuar pelo WhatsApp
+      </a>
+      <br>
+      <small style="color:#888; font-size:0.78rem;">Uma cópia também foi enviada para marsengenhariaeletrica@gmail.com</small>
     </div>
 
     <!-- Formulário Netlify -->
@@ -1392,11 +1432,44 @@
     const btnLoading = document.getElementById('btnLoading');
     const btnEnviar = document.getElementById('btnEnviar');
 
+    // Capturar dados do formulário
+    const nome     = document.getElementById('nome').value.trim();
+    const whatsapp = document.getElementById('whatsapp').value.trim();
+    const email    = document.getElementById('email').value.trim();
+    const servico  = document.getElementById('servico').value.trim();
+    const mensagem = document.getElementById('mensagem').value.trim();
+
     // Mostrar loading
     btnTexto.style.display = 'none';
     btnLoading.style.display = 'inline';
     btnEnviar.disabled = true;
 
+    // Montar mensagem do WhatsApp com todos os dados
+    const msgWhats = 
+`Olá, MARS! Vim pelo site e gostaria de solicitar um orçamento. 📋
+
+*Nome:* ${nome}
+*WhatsApp:* ${whatsapp}
+*E-mail:* ${email || 'Não informado'}
+*Serviço:* ${servico}
+*Descrição:* ${mensagem || 'Não informado'}`;
+
+    const linkWhats = `https://wa.me/5511964563416?text=${encodeURIComponent(msgWhats)}`;
+
+    // Montar link mailto como fallback de e-mail
+    const assunto = encodeURIComponent(`Orçamento MARS — ${servico}`);
+    const corpo   = encodeURIComponent(
+`Nome: ${nome}
+WhatsApp: ${whatsapp}
+E-mail: ${email || 'Não informado'}
+Serviço: ${servico}
+Descrição: ${mensagem || 'Não informado'}`);
+    const linkEmail = `mailto:marsengenhariaeletrica@gmail.com?subject=${assunto}&body=${corpo}`;
+
+    // Atualizar botão WhatsApp na tela de sucesso
+    document.getElementById('btnWhatsAppSucesso').href = linkWhats;
+
+    // Enviar para Netlify Forms (funciona apenas quando publicado)
     try {
       const formData = new FormData(form);
       await fetch('/', {
@@ -1404,16 +1477,21 @@
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams(formData).toString()
       });
-
-      // Mostrar sucesso
-      form.style.display = 'none';
-      document.getElementById('formSucesso').style.display = 'block';
-
     } catch (err) {
-      // Fallback — mesmo com erro de rede, mostrar sucesso (Netlify processa no servidor)
-      form.style.display = 'none';
-      document.getElementById('formSucesso').style.display = 'block';
+      // Netlify processa no servidor, continuar normalmente
     }
+
+    // Abrir e-mail automaticamente
+    window.location.href = linkEmail;
+
+    // Aguardar 1s e abrir WhatsApp em nova aba
+    setTimeout(() => {
+      window.open(linkWhats, '_blank');
+    }, 800);
+
+    // Mostrar tela de sucesso
+    form.style.display = 'none';
+    document.getElementById('formSucesso').style.display = 'block';
   }
 </script>
 
