@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MARS Serviços e Soluções | Construindo Soluções Sólidas</title>
+<meta name="description" content="MARS Serviços e Soluções Ltda. — Instalações elétricas, hidráulicas, câmeras de segurança, reformas e projetos de engenharia em São Bernardo do Campo - SP.">
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -14,878 +15,370 @@
     --gray: #4A4A4A;
     --light-gray: #F5F4F2;
     --white: #FFFFFF;
-    --accent: #D4A017;
+    --green-wa: #25D366;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
   html { scroll-behavior: smooth; }
+  body { font-family: 'Barlow', sans-serif; background: var(--white); color: var(--dark); overflow-x: hidden; }
 
-  body {
-    font-family: 'Barlow', sans-serif;
-    background: var(--white);
-    color: var(--dark);
-    overflow-x: hidden;
+  /* ── BANNER SITE EM CONSTRUÇÃO ── */
+  .banner-construcao {
+    background: linear-gradient(90deg, #7B1010, var(--red), #7B1010);
+    background-size: 200% 100%;
+    animation: slideBg 4s ease-in-out infinite alternate;
+    color: var(--white);
+    text-align: center;
+    padding: 0.6rem 1rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
   }
+  @keyframes slideBg {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+  }
+  .banner-construcao span { opacity: 0.8; font-size: 1.1rem; }
+  .banner-construcao strong { color: #FFD700; }
 
-  /* NAV */
+  /* ── NAV ── */
   nav {
-    position: fixed; top: 0; width: 100%; z-index: 999;
-    background: rgba(26,26,26,0.97);
-    backdrop-filter: blur(10px);
+    position: sticky; top: 0; width: 100%; z-index: 999;
+    background: rgba(26,26,26,0.98);
+    backdrop-filter: blur(12px);
     padding: 0 5%;
     display: flex; align-items: center; justify-content: space-between;
-    height: 70px;
+    height: 68px;
     border-bottom: 2px solid var(--red);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.4);
   }
-
   .nav-logo {
     font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 900; font-size: 1.6rem;
-    color: var(--white); letter-spacing: 2px;
+    font-weight: 900; font-size: 1.7rem;
+    color: var(--white); letter-spacing: 3px;
   }
-
   .nav-logo span { color: var(--red-light); }
-
-  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links { display: flex; gap: 1.8rem; list-style: none; }
   .nav-links a {
-    color: #ccc; text-decoration: none;
-    font-size: 0.85rem; font-weight: 500; letter-spacing: 1px;
-    text-transform: uppercase;
-    transition: color 0.2s;
+    color: #bbb; text-decoration: none;
+    font-size: 0.8rem; font-weight: 600; letter-spacing: 1.5px;
+    text-transform: uppercase; transition: color 0.2s;
   }
   .nav-links a:hover { color: var(--red-light); }
-
   .nav-cta {
-    background: var(--red);
+    background: var(--red) !important;
     color: var(--white) !important;
-    padding: 0.5rem 1.2rem !important;
+    padding: 0.45rem 1.1rem !important;
     border-radius: 3px;
-    font-weight: 600 !important;
   }
-  .nav-cta:hover { background: var(--red-light); color: var(--white) !important; }
+  .nav-cta:hover { background: var(--red-light) !important; }
 
-  /* HERO */
+  /* ── HERO ── */
   .hero {
     min-height: 100vh;
     background: var(--darker);
     display: flex; align-items: center;
     position: relative; overflow: hidden;
-    padding-top: 70px;
   }
-
   .hero-bg {
     position: absolute; inset: 0;
     background:
-      repeating-linear-gradient(
-        90deg,
-        transparent,
-        transparent 80px,
-        rgba(155,28,28,0.04) 80px,
-        rgba(155,28,28,0.04) 81px
-      ),
-      repeating-linear-gradient(
-        0deg,
-        transparent,
-        transparent 80px,
-        rgba(155,28,28,0.04) 80px,
-        rgba(155,28,28,0.04) 81px
-      );
+      repeating-linear-gradient(90deg, transparent, transparent 80px, rgba(155,28,28,0.04) 80px, rgba(155,28,28,0.04) 81px),
+      repeating-linear-gradient(0deg, transparent, transparent 80px, rgba(155,28,28,0.04) 80px, rgba(155,28,28,0.04) 81px);
   }
-
   .hero-triangle {
     position: absolute; right: -5%; bottom: -10%;
-    width: 55vw; height: 55vw; max-width: 750px; max-height: 750px;
-    border: 2px solid rgba(155,28,28,0.15);
+    width: 55vw; height: 55vw; max-width: 720px; max-height: 720px;
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
     background: rgba(155,28,28,0.06);
+    border: 2px solid rgba(155,28,28,0.12);
     transform: rotate(10deg);
   }
-
   .hero-triangle2 {
-    position: absolute; right: 5%; bottom: -5%;
-    width: 40vw; height: 40vw; max-width: 550px; max-height: 550px;
-    border: 1px solid rgba(155,28,28,0.1);
+    position: absolute; right: 6%; bottom: -4%;
+    width: 38vw; height: 38vw; max-width: 520px; max-height: 520px;
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    background: rgba(155,28,28,0.04);
-    transform: rotate(-5deg);
+    background: rgba(155,28,28,0.03);
+    border: 1px solid rgba(155,28,28,0.08);
+    transform: rotate(-4deg);
   }
-
   .hero-content {
     position: relative; z-index: 2;
-    padding: 0 8%;
-    max-width: 750px;
+    padding: 0 8%; max-width: 760px;
     animation: fadeUp 0.9s ease both;
   }
-
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(40px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
+  @keyframes fadeUp { from { opacity:0; transform:translateY(40px); } to { opacity:1; transform:translateY(0); } }
   .hero-tag {
     display: inline-block;
-    background: var(--red);
-    color: var(--white);
-    font-size: 0.72rem;
-    font-weight: 700; letter-spacing: 3px;
-    text-transform: uppercase;
-    padding: 0.35rem 1rem;
-    margin-bottom: 1.5rem;
-    border-radius: 2px;
+    background: var(--red); color: var(--white);
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 3px;
+    text-transform: uppercase; padding: 0.35rem 1rem;
+    margin-bottom: 1.5rem; border-radius: 2px;
   }
-
   .hero h1 {
     font-family: 'Barlow Condensed', sans-serif;
     font-size: clamp(3rem, 7vw, 5.5rem);
     font-weight: 900; line-height: 0.95;
-    color: var(--white);
-    text-transform: uppercase; letter-spacing: 1px;
+    color: var(--white); text-transform: uppercase; letter-spacing: 1px;
     margin-bottom: 1.5rem;
   }
-
-  .hero h1 em {
-    color: var(--red-light);
-    font-style: normal;
-    display: block;
-  }
-
-  .hero-sub {
-    font-size: 1.1rem; color: #aaa;
-    line-height: 1.7; max-width: 520px;
-    margin-bottom: 2.5rem;
-  }
-
+  .hero h1 em { color: var(--red-light); font-style: normal; display: block; }
+  .hero-sub { font-size: 1.05rem; color: #aaa; line-height: 1.75; max-width: 520px; margin-bottom: 2.5rem; }
   .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
-
   .btn-primary {
-    background: var(--red);
-    color: var(--white);
-    padding: 1rem 2rem;
+    background: var(--red); color: var(--white);
+    padding: 0.95rem 2rem;
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 1rem; font-weight: 700;
-    letter-spacing: 2px; text-transform: uppercase;
-    text-decoration: none; border-radius: 3px;
-    border: 2px solid var(--red);
-    transition: all 0.25s;
-    display: inline-flex; align-items: center; gap: 0.5rem;
+    font-size: 1rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+    text-decoration: none; border-radius: 3px; border: 2px solid var(--red);
+    transition: all 0.25s; display: inline-flex; align-items: center; gap: 0.5rem;
   }
-  .btn-primary:hover {
-    background: transparent; color: var(--red-light);
-    border-color: var(--red-light);
-  }
-
+  .btn-primary:hover { background: transparent; color: var(--red-light); border-color: var(--red-light); }
   .btn-secondary {
-    background: transparent;
-    color: var(--white);
-    padding: 1rem 2rem;
+    background: transparent; color: var(--white);
+    padding: 0.95rem 2rem;
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 1rem; font-weight: 700;
-    letter-spacing: 2px; text-transform: uppercase;
-    text-decoration: none; border-radius: 3px;
-    border: 2px solid rgba(255,255,255,0.3);
+    font-size: 1rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+    text-decoration: none; border-radius: 3px; border: 2px solid rgba(255,255,255,0.25);
     transition: all 0.25s;
   }
   .btn-secondary:hover { border-color: var(--white); }
 
-  /* STATS BAR */
+  /* ── STATS BAR ── */
   .stats-bar {
     background: var(--red);
-    padding: 1.5rem 8%;
+    padding: 1.4rem 8%;
     display: flex; justify-content: space-around; flex-wrap: wrap; gap: 1rem;
   }
-
-  .stat {
-    text-align: center; color: var(--white);
-    animation: fadeUp 0.6s ease both;
-  }
-
+  .stat { text-align: center; color: var(--white); }
   .stat-num {
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 2.2rem; font-weight: 900; line-height: 1;
-    display: block;
+    font-size: 2.2rem; font-weight: 900; line-height: 1; display: block;
   }
+  .stat-label { font-size: 0.72rem; letter-spacing: 2px; text-transform: uppercase; opacity: 0.85; }
 
-  .stat-label {
-    font-size: 0.75rem; letter-spacing: 2px;
-    text-transform: uppercase; opacity: 0.85;
-  }
-
-  /* SOBRE */
+  /* ── SOBRE ── */
   .sobre {
     padding: 6rem 8%;
     display: grid; grid-template-columns: 1fr 1fr;
     gap: 4rem; align-items: center;
   }
-
   .sobre-text h2 {
     font-family: 'Barlow Condensed', sans-serif;
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 800; text-transform: uppercase;
-    line-height: 1.1; margin-bottom: 1.5rem;
-    color: var(--darker);
+    line-height: 1.1; margin-bottom: 1.5rem; color: var(--darker);
   }
-
   .sobre-text h2 span { color: var(--red); }
-
-  .sobre-text p {
-    color: var(--gray); line-height: 1.8;
-    font-size: 1rem; margin-bottom: 1rem;
-  }
-
-  .diferenciais {
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 1rem; margin-top: 2rem;
-  }
-
+  .sobre-text p { color: var(--gray); line-height: 1.8; font-size: 1rem; margin-bottom: 1rem; }
+  .diferenciais { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem; }
   .diferencial {
     display: flex; align-items: flex-start; gap: 0.75rem;
-    padding: 1rem;
-    border-left: 3px solid var(--red);
-    background: var(--light-gray);
-    border-radius: 0 4px 4px 0;
+    padding: 1rem; border-left: 3px solid var(--red);
+    background: var(--light-gray); border-radius: 0 4px 4px 0;
   }
-
-  .diferencial-icon {
-    font-size: 1.3rem; flex-shrink: 0;
-    margin-top: 0.1rem;
-  }
-
-  .diferencial h4 {
-    font-size: 0.85rem; font-weight: 700;
-    text-transform: uppercase; letter-spacing: 0.5px;
-    color: var(--darker); margin-bottom: 0.2rem;
-  }
-
-  .diferencial p { font-size: 0.8rem; color: var(--gray); line-height: 1.5; }
-
+  .diferencial-icon { font-size: 1.3rem; flex-shrink: 0; margin-top: 0.1rem; }
+  .diferencial h4 { font-size: 0.83rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--darker); margin-bottom: 0.2rem; }
+  .diferencial p { font-size: 0.78rem; color: var(--gray); line-height: 1.5; }
   .sobre-visual {
-    position: relative;
-    background: var(--darker);
-    border-radius: 4px;
-    overflow: hidden;
-    min-height: 400px;
+    position: relative; background: var(--darker);
+    border-radius: 4px; overflow: hidden; min-height: 400px;
     display: flex; align-items: center; justify-content: center;
   }
-
-  .sobre-visual-inner {
-    position: relative; z-index: 2;
-    text-align: center; padding: 2rem;
-  }
-
   .sobre-visual::before {
-    content: '';
-    position: absolute; inset: 0;
-    background:
-      linear-gradient(135deg, rgba(155,28,28,0.3) 0%, transparent 60%);
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(155,28,28,0.3) 0%, transparent 60%);
   }
-
   .sobre-logo-placeholder {
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 5rem; font-weight: 900;
-    color: var(--white); opacity: 0.08;
-    line-height: 1;
+    color: var(--white); opacity: 0.06; line-height: 1;
+    position: relative; z-index: 1;
   }
-
   .sobre-badge {
     position: absolute; bottom: 2rem; right: 2rem;
-    background: var(--red);
-    color: var(--white);
-    padding: 1rem 1.5rem;
-    border-radius: 3px; text-align: center;
-    z-index: 3;
+    background: var(--red); color: var(--white);
+    padding: 1rem 1.5rem; border-radius: 3px; text-align: center; z-index: 3;
   }
+  .sobre-badge strong { font-family: 'Barlow Condensed', sans-serif; font-size: 2.2rem; font-weight: 900; display: block; line-height: 1; }
+  .sobre-badge span { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 1px; }
 
-  .sobre-badge strong {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 2.5rem; font-weight: 900;
-    display: block; line-height: 1;
-  }
-
-  .sobre-badge span { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; }
-
-  /* SERVIÇOS */
-  .servicos {
-    background: var(--light-gray);
-    padding: 6rem 8%;
-  }
-
-  .section-header {
-    text-align: center; margin-bottom: 3.5rem;
-  }
-
+  /* ── SERVIÇOS ── */
+  .servicos { background: var(--light-gray); padding: 6rem 8%; }
+  .section-header { text-align: center; margin-bottom: 3.5rem; }
   .section-tag {
-    display: inline-block;
-    background: transparent;
-    border: 1px solid var(--red);
-    color: var(--red);
-    font-size: 0.7rem; font-weight: 700;
-    letter-spacing: 3px; text-transform: uppercase;
-    padding: 0.3rem 1rem;
-    margin-bottom: 1rem;
-    border-radius: 2px;
+    display: inline-block; background: transparent;
+    border: 1px solid var(--red); color: var(--red);
+    font-size: 0.7rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase;
+    padding: 0.3rem 1rem; margin-bottom: 1rem; border-radius: 2px;
   }
-
   .section-header h2 {
     font-family: 'Barlow Condensed', sans-serif;
     font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 800; text-transform: uppercase;
-    color: var(--darker); line-height: 1.1;
+    font-weight: 800; text-transform: uppercase; color: var(--darker); line-height: 1.1;
   }
-
-  .section-header p {
-    color: var(--gray); margin-top: 0.75rem;
-    font-size: 1rem; max-width: 500px; margin-inline: auto;
-  }
-
-  .servicos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-  }
-
+  .section-header p { color: var(--gray); margin-top: 0.75rem; font-size: 1rem; max-width: 500px; margin-inline: auto; }
+  .servicos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 1.5rem; }
   .servico-card {
-    background: var(--white);
-    border-radius: 4px;
-    padding: 2rem;
-    border-top: 4px solid transparent;
-    transition: all 0.3s ease;
-    cursor: default;
-    position: relative; overflow: hidden;
+    background: var(--white); border-radius: 4px; padding: 2rem;
+    border-top: 4px solid transparent; transition: all 0.3s ease;
   }
-
-  .servico-card::before {
-    content: '';
-    position: absolute; top: 0; left: 0;
-    width: 4px; height: 0;
-    background: var(--red);
-    transition: height 0.3s ease;
-    /* reset - top border handles it */
-  }
-
-  .servico-card:hover {
-    border-top-color: var(--red);
-    box-shadow: 0 12px 40px rgba(0,0,0,0.1);
-    transform: translateY(-4px);
-  }
-
-  .servico-icon {
-    font-size: 2.2rem; margin-bottom: 1rem;
-    display: block;
-  }
-
+  .servico-card:hover { border-top-color: var(--red); box-shadow: 0 12px 40px rgba(0,0,0,0.1); transform: translateY(-4px); }
+  .servico-icon { font-size: 2.2rem; margin-bottom: 1rem; display: block; }
   .servico-card h3 {
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 1.3rem; font-weight: 700;
-    text-transform: uppercase; letter-spacing: 0.5px;
+    font-size: 1.3rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;
     color: var(--darker); margin-bottom: 0.75rem;
   }
-
-  .servico-card p {
-    font-size: 0.9rem; color: var(--gray);
-    line-height: 1.7;
-  }
-
+  .servico-card p { font-size: 0.9rem; color: var(--gray); line-height: 1.7; }
   .servico-link {
     display: inline-flex; align-items: center; gap: 0.4rem;
-    margin-top: 1.2rem;
-    color: var(--red); font-weight: 600;
-    font-size: 0.85rem; text-decoration: none;
-    text-transform: uppercase; letter-spacing: 1px;
+    margin-top: 1.2rem; color: var(--red); font-weight: 600;
+    font-size: 0.85rem; text-decoration: none; text-transform: uppercase; letter-spacing: 1px;
     transition: gap 0.2s;
   }
   .servico-link:hover { gap: 0.7rem; }
 
-  /* PROCESSO */
-  .processo {
-    padding: 6rem 8%;
-    background: var(--darker);
-    position: relative; overflow: hidden;
-  }
-
-  .processo .section-header h2 { color: var(--white); }
-  .processo .section-header p { color: #888; }
-
-  .processo-steps {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 0;
-    position: relative;
-  }
-
-  .processo-steps::before {
-    content: '';
-    position: absolute;
-    top: 2rem; left: 10%; right: 10%;
-    height: 2px;
-    background: linear-gradient(90deg, var(--red), rgba(155,28,28,0.2));
-  }
-
-  .step {
-    text-align: center; padding: 0 1.5rem;
-    position: relative; z-index: 1;
-  }
-
-  .step-num {
-    width: 4rem; height: 4rem;
-    background: var(--red);
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    margin: 0 auto 1.5rem;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 1.5rem; font-weight: 900;
-    color: var(--white);
-    border: 3px solid var(--darker);
-    outline: 2px solid var(--red);
-  }
-
-  .step h4 {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 1.1rem; font-weight: 700;
-    text-transform: uppercase; letter-spacing: 1px;
-    color: var(--white); margin-bottom: 0.5rem;
-  }
-
-  .step p { font-size: 0.85rem; color: #888; line-height: 1.6; }
-
-  /* PORTFÓLIO */
-  .portfolio {
-    padding: 6rem 8%;
-    background: var(--darker);
-  }
-
+  /* ── PORTFÓLIO ── */
+  .portfolio { padding: 6rem 8%; background: var(--darker); }
   .portfolio .section-header h2 { color: var(--white); }
   .portfolio .section-header p { color: #888; }
-
-  .portfolio-filters {
-    display: flex; justify-content: center;
-    gap: 0.75rem; flex-wrap: wrap;
-    margin-bottom: 2.5rem;
-  }
-
+  .portfolio-filters { display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
   .filter-btn {
-    background: transparent;
-    border: 1.5px solid rgba(255,255,255,0.15);
-    color: #888;
+    background: transparent; border: 1.5px solid rgba(255,255,255,0.15); color: #888;
     padding: 0.45rem 1.2rem;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 0.85rem; font-weight: 600;
-    letter-spacing: 1.5px; text-transform: uppercase;
-    border-radius: 2px; cursor: pointer;
-    transition: all 0.2s;
+    font-family: 'Barlow Condensed', sans-serif; font-size: 0.85rem; font-weight: 600;
+    letter-spacing: 1.5px; text-transform: uppercase; border-radius: 2px; cursor: pointer; transition: all 0.2s;
   }
-
-  .filter-btn:hover,
-  .filter-btn.active {
-    background: var(--red);
-    border-color: var(--red);
-    color: var(--white);
-  }
-
-  .portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
-    gap: 1rem;
-  }
-
-  .portfolio-item {
-    position: relative; overflow: hidden;
-    border-radius: 4px; cursor: pointer;
-    background: #111;
-    aspect-ratio: 4/3;
-  }
-
-  .portfolio-item.large {
-    grid-column: span 2;
-    aspect-ratio: 16/9;
-  }
-
-  .portfolio-img {
-    width: 100%; height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.4s ease, filter 0.4s ease;
-    filter: brightness(0.85);
-  }
-
+  .filter-btn:hover, .filter-btn.active { background: var(--red); border-color: var(--red); color: var(--white); }
+  .portfolio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+  .portfolio-item { position: relative; overflow: hidden; border-radius: 4px; background: #111; aspect-ratio: 4/3; }
+  .portfolio-item.large { grid-column: span 2; aspect-ratio: 16/9; }
+  .portfolio-img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease, filter 0.4s ease; filter: brightness(0.85); }
+  .portfolio-item:hover .portfolio-img { transform: scale(1.05); filter: brightness(1); }
   .portfolio-placeholder {
-    width: 100%; height: 100%;
-    display: flex; flex-direction: column;
-    align-items: center; justify-content: center;
-    gap: 0.75rem;
+    width: 100%; height: 100%; min-height: 180px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.75rem;
     background: linear-gradient(135deg, #1e1e1e 0%, #2a2a2a 100%);
-    border: 2px dashed rgba(155,28,28,0.35);
-    transition: all 0.3s;
-    min-height: 180px;
+    border: 2px dashed rgba(155,28,28,0.35); transition: all 0.3s;
   }
-
   .portfolio-item.large .portfolio-placeholder { min-height: 220px; }
-
-  .portfolio-placeholder-icon {
-    font-size: 2.2rem; opacity: 0.4;
-  }
-
-  .portfolio-placeholder-text {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 0.8rem; font-weight: 700;
-    letter-spacing: 2px; text-transform: uppercase;
-    color: rgba(255,255,255,0.25);
-    text-align: center; padding: 0 1rem;
-  }
-
-  .portfolio-placeholder-tag {
-    font-size: 0.7rem;
-    color: rgba(155,28,28,0.5);
-    font-weight: 600; letter-spacing: 1px;
-    text-transform: uppercase;
-  }
-
-  .portfolio-item:hover .portfolio-placeholder {
-    border-color: var(--red);
-    background: linear-gradient(135deg, #1e1e1e 0%, #2f1a1a 100%);
-  }
-
+  .portfolio-item:hover .portfolio-placeholder { border-color: var(--red); background: linear-gradient(135deg, #1e1e1e 0%, #2f1a1a 100%); }
+  .portfolio-placeholder-icon { font-size: 2.2rem; opacity: 0.4; }
   .portfolio-item:hover .portfolio-placeholder-icon { opacity: 0.7; }
+  .portfolio-placeholder-text { font-family: 'Barlow Condensed', sans-serif; font-size: 0.8rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.25); text-align: center; padding: 0 1rem; }
   .portfolio-item:hover .portfolio-placeholder-text { color: rgba(255,255,255,0.45); }
-
-  .portfolio-item:hover .portfolio-img {
-    transform: scale(1.05);
-    filter: brightness(1);
-  }
-
+  .portfolio-placeholder-tag { font-size: 0.7rem; color: rgba(155,28,28,0.5); font-weight: 600; letter-spacing: 1px; text-transform: uppercase; }
   .portfolio-overlay {
     position: absolute; inset: 0;
     background: linear-gradient(to top, rgba(155,28,28,0.85) 0%, transparent 55%);
     opacity: 0; transition: opacity 0.3s;
-    display: flex; align-items: flex-end;
-    padding: 1.25rem;
+    display: flex; align-items: flex-end; padding: 1.25rem;
   }
-
   .portfolio-item:hover .portfolio-overlay { opacity: 1; }
-
-  .portfolio-overlay-content h4 {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 1.1rem; font-weight: 800;
-    text-transform: uppercase; letter-spacing: 1px;
-    color: var(--white); margin-bottom: 0.2rem;
-  }
-
-  .portfolio-overlay-content span {
-    font-size: 0.78rem; color: rgba(255,255,255,0.75);
-    text-transform: uppercase; letter-spacing: 1px;
-  }
-
-  .portfolio-hint {
-    text-align: center; margin-top: 1.5rem;
-    color: #555; font-size: 0.82rem;
-    font-style: italic; letter-spacing: 0.5px;
-  }
-
+  .portfolio-overlay-content h4 { font-family: 'Barlow Condensed', sans-serif; font-size: 1.1rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: var(--white); margin-bottom: 0.2rem; }
+  .portfolio-overlay-content span { font-size: 0.78rem; color: rgba(255,255,255,0.75); text-transform: uppercase; letter-spacing: 1px; }
+  .portfolio-hint { text-align: center; margin-top: 1.5rem; color: #555; font-size: 0.82rem; font-style: italic; letter-spacing: 0.5px; }
   .portfolio-hint strong { color: var(--red); font-style: normal; }
 
-  @media (max-width: 768px) {
-    .portfolio-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    .portfolio-item.large { grid-column: span 2; }
-  }
+  /* ── PROCESSO ── */
+  .processo { padding: 6rem 8%; background: var(--darker); position: relative; overflow: hidden; }
+  .processo .section-header h2 { color: var(--white); }
+  .processo .section-header p { color: #888; }
+  .processo-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0; position: relative; }
+  .processo-steps::before { content: ''; position: absolute; top: 2rem; left: 10%; right: 10%; height: 2px; background: linear-gradient(90deg, var(--red), rgba(155,28,28,0.15)); }
+  .step { text-align: center; padding: 0 1.5rem; position: relative; z-index: 1; }
+  .step-num { width: 4rem; height: 4rem; background: var(--red); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-family: 'Barlow Condensed', sans-serif; font-size: 1.5rem; font-weight: 900; color: var(--white); border: 3px solid var(--darker); outline: 2px solid var(--red); }
+  .step h4 { font-family: 'Barlow Condensed', sans-serif; font-size: 1.05rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--white); margin-bottom: 0.5rem; }
+  .step p { font-size: 0.83rem; color: #888; line-height: 1.6; }
 
-  @media (max-width: 480px) {
-    .portfolio-grid { grid-template-columns: 1fr; }
-    .portfolio-item.large { grid-column: span 1; aspect-ratio: 4/3; }
-  }
-
-  /* DEPOIMENTOS */
-  .depoimentos {
-    padding: 6rem 8%;
-    background: var(--white);
-  }
-
-  .depoimentos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-  }
-
-  .depo-card {
-    background: var(--light-gray);
-    padding: 2rem;
-    border-radius: 4px;
-    position: relative;
-    border-bottom: 3px solid var(--red);
-  }
-
-  .depo-stars { color: var(--accent); font-size: 1rem; margin-bottom: 1rem; }
-
-  .depo-text {
-    font-size: 0.95rem; color: var(--gray);
-    line-height: 1.7; margin-bottom: 1.5rem;
-    font-style: italic;
-  }
-
-  .depo-author {
-    display: flex; align-items: center; gap: 0.75rem;
-  }
-
-  .depo-avatar {
-    width: 42px; height: 42px;
-    border-radius: 50%;
-    background: var(--red);
-    display: flex; align-items: center; justify-content: center;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 900; font-size: 1.1rem;
-    color: var(--white);
-    flex-shrink: 0;
-  }
-
+  /* ── DEPOIMENTOS ── */
+  .depoimentos { padding: 6rem 8%; background: var(--white); }
+  .depoimentos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+  .depo-card { background: var(--light-gray); padding: 2rem; border-radius: 4px; position: relative; border-bottom: 3px solid var(--red); }
+  .depo-stars { color: #D4A017; font-size: 1rem; margin-bottom: 1rem; }
+  .depo-text { font-size: 0.93rem; color: var(--gray); line-height: 1.7; margin-bottom: 1.5rem; font-style: italic; }
+  .depo-author { display: flex; align-items: center; gap: 0.75rem; }
+  .depo-avatar { width: 42px; height: 42px; border-radius: 50%; background: var(--red); display: flex; align-items: center; justify-content: center; font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 1.1rem; color: var(--white); flex-shrink: 0; }
   .depo-name { font-weight: 700; font-size: 0.9rem; color: var(--darker); }
   .depo-role { font-size: 0.78rem; color: #888; }
+  .depo-quote { position: absolute; top: 1.5rem; right: 1.5rem; font-size: 3rem; color: var(--red); opacity: 0.13; font-family: Georgia, serif; line-height: 1; }
 
-  .depo-quote {
-    position: absolute; top: 1.5rem; right: 1.5rem;
-    font-size: 3rem; color: var(--red); opacity: 0.15;
-    font-family: Georgia, serif; line-height: 1;
-  }
-
-  /* CTA */
-  .cta-section {
-    background: var(--red);
-    padding: 5rem 8%;
-    text-align: center;
-    position: relative; overflow: hidden;
-  }
-
-  .cta-section::before {
-    content: 'MARS';
-    position: absolute;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 20rem; font-weight: 900;
-    color: rgba(0,0,0,0.08);
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    white-space: nowrap; pointer-events: none;
-  }
-
-  .cta-section h2 {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    font-weight: 900; text-transform: uppercase;
-    color: var(--white); line-height: 1.1;
-    margin-bottom: 1rem;
-    position: relative; z-index: 1;
-  }
-
-  .cta-section p {
-    color: rgba(255,255,255,0.85);
-    font-size: 1.05rem; margin-bottom: 2.5rem;
-    position: relative; z-index: 1;
-  }
-
-  .cta-btns {
-    display: flex; justify-content: center;
-    gap: 1rem; flex-wrap: wrap;
-    position: relative; z-index: 1;
-  }
-
-  .btn-white {
-    background: var(--white); color: var(--red);
-    padding: 1rem 2.5rem;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 1.05rem; font-weight: 800;
-    letter-spacing: 2px; text-transform: uppercase;
-    text-decoration: none; border-radius: 3px;
-    border: 2px solid var(--white);
-    transition: all 0.25s;
-  }
+  /* ── CTA ── */
+  .cta-section { background: var(--red); padding: 5rem 8%; text-align: center; position: relative; overflow: hidden; }
+  .cta-section::before { content: 'MARS'; position: absolute; font-family: 'Barlow Condensed', sans-serif; font-size: 20rem; font-weight: 900; color: rgba(0,0,0,0.08); top: 50%; left: 50%; transform: translate(-50%, -50%); white-space: nowrap; pointer-events: none; }
+  .cta-section h2 { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 900; text-transform: uppercase; color: var(--white); line-height: 1.1; margin-bottom: 1rem; position: relative; z-index: 1; }
+  .cta-section p { color: rgba(255,255,255,0.85); font-size: 1.05rem; margin-bottom: 2.5rem; position: relative; z-index: 1; }
+  .cta-btns { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; position: relative; z-index: 1; }
+  .btn-white { background: var(--white); color: var(--red); padding: 1rem 2.5rem; font-family: 'Barlow Condensed', sans-serif; font-size: 1.05rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; border-radius: 3px; border: 2px solid var(--white); transition: all 0.25s; }
   .btn-white:hover { background: transparent; color: var(--white); }
-
-  .btn-outline-white {
-    background: transparent; color: var(--white);
-    padding: 1rem 2.5rem;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 1.05rem; font-weight: 700;
-    letter-spacing: 2px; text-transform: uppercase;
-    text-decoration: none; border-radius: 3px;
-    border: 2px solid rgba(255,255,255,0.5);
-    transition: all 0.25s;
-  }
+  .btn-outline-white { background: transparent; color: var(--white); padding: 1rem 2.5rem; font-family: 'Barlow Condensed', sans-serif; font-size: 1.05rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; border-radius: 3px; border: 2px solid rgba(255,255,255,0.4); transition: all 0.25s; }
   .btn-outline-white:hover { border-color: var(--white); }
 
-  /* CONTATO */
-  .contato {
-    padding: 6rem 8%;
-    background: var(--light-gray);
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 4rem; align-items: start;
-  }
-
-  .contato-info h2 {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 2.5rem; font-weight: 800;
-    text-transform: uppercase; color: var(--darker);
-    line-height: 1.1; margin-bottom: 1rem;
-  }
-
+  /* ── CONTATO ── */
+  .contato { padding: 6rem 8%; background: var(--light-gray); display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; align-items: start; }
+  .contato-info h2 { font-family: 'Barlow Condensed', sans-serif; font-size: 2.5rem; font-weight: 800; text-transform: uppercase; color: var(--darker); line-height: 1.1; margin-bottom: 1rem; }
   .contato-info h2 span { color: var(--red); }
   .contato-info > p { color: var(--gray); line-height: 1.7; margin-bottom: 2rem; }
-
-  .contato-items { display: flex; flex-direction: column; gap: 1.25rem; }
-
-  .contato-item {
-    display: flex; align-items: center; gap: 1rem;
-    padding: 1rem 1.25rem;
-    background: var(--white);
-    border-radius: 3px;
-    border-left: 3px solid var(--red);
-  }
-
+  .contato-items { display: flex; flex-direction: column; gap: 1.1rem; }
+  .contato-item { display: flex; align-items: center; gap: 1rem; padding: 1rem 1.25rem; background: var(--white); border-radius: 3px; border-left: 3px solid var(--red); text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; }
+  .contato-item:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.08); }
   .contato-item-icon { font-size: 1.4rem; flex-shrink: 0; }
-
-  .contato-item h4 {
-    font-size: 0.75rem; font-weight: 700;
-    text-transform: uppercase; letter-spacing: 1px;
-    color: var(--red); margin-bottom: 0.2rem;
-  }
-
+  .contato-item h4 { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--red); margin-bottom: 0.2rem; }
   .contato-item p { font-size: 0.9rem; color: var(--darker); font-weight: 500; }
 
-  /* FORM */
-  .form-orcamento {
-    background: var(--white);
-    padding: 2.5rem;
-    border-radius: 4px;
-    box-shadow: 0 4px 30px rgba(0,0,0,0.06);
-  }
-
-  .form-orcamento h3 {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 1.6rem; font-weight: 800;
-    text-transform: uppercase; color: var(--darker);
-    margin-bottom: 0.5rem;
-  }
-
+  /* ── FORMULÁRIO ── */
+  .form-orcamento { background: var(--white); padding: 2.5rem; border-radius: 4px; box-shadow: 0 4px 30px rgba(0,0,0,0.07); }
+  .form-orcamento h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 1.6rem; font-weight: 800; text-transform: uppercase; color: var(--darker); margin-bottom: 0.4rem; }
   .form-orcamento h3 span { color: var(--red); }
-  .form-orcamento > p { color: var(--gray); font-size: 0.9rem; margin-bottom: 1.75rem; }
-
+  .form-orcamento > p { color: var(--gray); font-size: 0.88rem; margin-bottom: 1.75rem; }
   .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-
   .form-group { margin-bottom: 1rem; }
-
-  label {
-    display: block;
-    font-size: 0.75rem; font-weight: 700;
-    text-transform: uppercase; letter-spacing: 1px;
-    color: var(--gray); margin-bottom: 0.4rem;
-  }
-
-  input, select, textarea {
-    width: 100%; padding: 0.8rem 1rem;
-    border: 1.5px solid #ddd;
-    border-radius: 3px;
-    font-family: 'Barlow', sans-serif;
-    font-size: 0.95rem; color: var(--darker);
-    background: var(--white);
-    transition: border-color 0.2s;
-    outline: none;
-    appearance: none;
-  }
-
+  label { display: block; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--gray); margin-bottom: 0.4rem; }
+  input, select, textarea { width: 100%; padding: 0.8rem 1rem; border: 1.5px solid #ddd; border-radius: 3px; font-family: 'Barlow', sans-serif; font-size: 0.95rem; color: var(--darker); background: var(--white); transition: border-color 0.2s; outline: none; appearance: none; }
   input:focus, select:focus, textarea:focus { border-color: var(--red); }
   textarea { resize: vertical; min-height: 100px; }
-
-  .btn-form {
-    width: 100%;
-    background: var(--red); color: var(--white);
-    padding: 1rem;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 1.1rem; font-weight: 800;
-    letter-spacing: 2px; text-transform: uppercase;
-    border: none; border-radius: 3px; cursor: pointer;
-    transition: background 0.2s;
-    display: flex; align-items: center; justify-content: center; gap: 0.5rem;
-    margin-top: 0.5rem;
-  }
+  .btn-form { width: 100%; background: var(--red); color: var(--white); padding: 1rem; font-family: 'Barlow Condensed', sans-serif; font-size: 1.1rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; border: none; border-radius: 3px; cursor: pointer; transition: background 0.2s; display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-top: 0.5rem; }
   .btn-form:hover { background: #7B1515; }
+  .btn-form:disabled { opacity: 0.7; cursor: not-allowed; }
 
-  /* FOOTER */
-  footer {
-    background: var(--darker);
-    padding: 3rem 8% 1.5rem;
-    border-top: 2px solid var(--red);
-  }
+  /* Sucesso */
+  #formSucesso { display: none; text-align: center; padding: 2rem 1rem; }
+  .sucesso-icon { font-size: 3.5rem; margin-bottom: 1rem; }
+  #formSucesso h4 { font-family: 'Barlow Condensed', sans-serif; font-size: 1.6rem; font-weight: 800; text-transform: uppercase; color: var(--darker); margin-bottom: 0.75rem; }
+  #formSucesso p { color: var(--gray); font-size: 0.95rem; line-height: 1.7; margin-bottom: 1.5rem; }
+  .btn-wa-sucesso { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--green-wa); color: var(--white); padding: 0.9rem 2rem; font-family: 'Barlow Condensed', sans-serif; font-size: 1rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; text-decoration: none; border-radius: 3px; transition: background 0.2s; }
+  .btn-wa-sucesso:hover { background: #1da851; }
 
-  .footer-top {
-    display: grid; grid-template-columns: 2fr 1fr 1fr;
-    gap: 3rem; padding-bottom: 2rem;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-    margin-bottom: 1.5rem;
-  }
-
-  .footer-brand p {
-    color: #777; font-size: 0.85rem; line-height: 1.7;
-    margin-top: 0.75rem; max-width: 300px;
-  }
-
-  .footer-logo {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 1.8rem; font-weight: 900;
-    color: var(--white); letter-spacing: 2px;
-  }
-
+  /* ── FOOTER ── */
+  footer { background: var(--darker); padding: 3rem 8% 1.5rem; border-top: 2px solid var(--red); }
+  .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.07); margin-bottom: 1.5rem; }
+  .footer-logo { font-family: 'Barlow Condensed', sans-serif; font-size: 1.8rem; font-weight: 900; color: var(--white); letter-spacing: 2px; }
   .footer-logo span { color: var(--red-light); }
-
-  .footer-col h4 {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 0.9rem; font-weight: 700;
-    text-transform: uppercase; letter-spacing: 2px;
-    color: var(--white); margin-bottom: 1rem;
-  }
-
+  .footer-brand p { color: #666; font-size: 0.83rem; line-height: 1.7; margin-top: 0.75rem; max-width: 300px; }
+  .footer-col h4 { font-family: 'Barlow Condensed', sans-serif; font-size: 0.88rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--white); margin-bottom: 1rem; }
   .footer-col ul { list-style: none; }
   .footer-col li { margin-bottom: 0.5rem; }
-  .footer-col a {
-    color: #777; text-decoration: none;
-    font-size: 0.85rem; transition: color 0.2s;
-  }
+  .footer-col a { color: #666; text-decoration: none; font-size: 0.83rem; transition: color 0.2s; }
   .footer-col a:hover { color: var(--red-light); }
-
-  .footer-bottom {
-    display: flex; justify-content: space-between; align-items: center;
-    flex-wrap: wrap; gap: 0.5rem;
-  }
-
-  .footer-bottom p { color: #555; font-size: 0.8rem; }
+  .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
+  .footer-bottom p { color: #444; font-size: 0.78rem; }
   .footer-bottom span { color: var(--red-light); }
 
-  /* WHATSAPP FLOAT */
-  .whatsapp-float {
-    position: fixed; bottom: 1.5rem; right: 1.5rem;
-    z-index: 9999;
-    background: #25D366;
-    color: var(--white);
-    width: 58px; height: 58px;
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1.8rem;
-    text-decoration: none;
-    box-shadow: 0 4px 20px rgba(37,211,102,0.4);
-    transition: transform 0.2s, box-shadow 0.2s;
-    animation: pulse 2.5s ease-in-out infinite;
-  }
+  /* ── WHATSAPP FLUTUANTE ── */
+  .whatsapp-float { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 9999; background: var(--green-wa); color: var(--white); width: 58px; height: 58px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; box-shadow: 0 4px 20px rgba(37,211,102,0.4); transition: transform 0.2s, box-shadow 0.2s; animation: pulse 2.5s ease-in-out infinite; }
+  .whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(37,211,102,0.6); }
+  @keyframes pulse { 0%,100% { box-shadow: 0 4px 20px rgba(37,211,102,0.4); } 50% { box-shadow: 0 4px 30px rgba(37,211,102,0.7), 0 0 0 8px rgba(37,211,102,0.1); } }
 
-  .whatsapp-float:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 28px rgba(37,211,102,0.6);
-  }
-
-  @keyframes pulse {
-    0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,0.4); }
-    50% { box-shadow: 0 4px 30px rgba(37,211,102,0.7), 0 0 0 8px rgba(37,211,102,0.1); }
-  }
-
-  /* RESPONSIVE */
+  /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
     .nav-links { display: none; }
     .sobre { grid-template-columns: 1fr; }
@@ -895,18 +388,25 @@
     .footer-top { grid-template-columns: 1fr; gap: 2rem; }
     .processo-steps::before { display: none; }
     .diferenciais { grid-template-columns: 1fr; }
+    .portfolio-grid { grid-template-columns: repeat(2,1fr); }
+    .portfolio-item.large { grid-column: span 2; }
   }
-
   @media (max-width: 600px) {
     .hero-content { padding: 0 5%; }
-    .stats-bar { gap: 1.5rem; padding: 1.5rem 5%; }
-    .sobre, .servicos, .processo, .depoimentos, .contato { padding: 4rem 5%; }
-    .cta-section { padding: 4rem 5%; }
-    footer { padding: 3rem 5% 1.5rem; }
+    .stats-bar, .sobre, .servicos, .portfolio, .processo, .depoimentos, .contato, .cta-section, footer { padding-left: 5%; padding-right: 5%; }
+    .portfolio-grid { grid-template-columns: 1fr; }
+    .portfolio-item.large { grid-column: span 1; aspect-ratio: 4/3; }
   }
 </style>
 </head>
 <body>
+
+<!-- BANNER SITE EM CONSTRUÇÃO -->
+<div class="banner-construcao">
+  <span>🚧</span>
+  <div>Site em <strong>construção</strong> — em breve com todas as novidades! Entre em contato pelo WhatsApp.</div>
+  <span>🚧</span>
+</div>
 
 <!-- NAV -->
 <nav>
@@ -940,7 +440,7 @@
 <!-- STATS -->
 <div class="stats-bar">
   <div class="stat">
-    <span class="stat-num">500+</span>
+    <span class="stat-num">+300</span>
     <span class="stat-label">Projetos Entregues</span>
   </div>
   <div class="stat">
@@ -951,49 +451,39 @@
     <span class="stat-num">24h</span>
     <span class="stat-label">Resposta Garantida</span>
   </div>
+  <div class="stat">
+    <span class="stat-num">CREA</span>
+    <span class="stat-label">Registro Ativo</span>
+  </div>
 </div>
 
 <!-- SOBRE -->
 <section class="sobre" id="sobre">
   <div class="sobre-text">
     <h2>Engenharia com<br><span>Propósito</span> e Precisão</h2>
-    <p>A MARS Serviços de Engenharia e Construção Ltda. nasceu da visão de entregar soluções técnicas completas com responsabilidade, inovação e compromisso com cada cliente.</p>
+    <p>A MARS Serviços e Soluções Ltda. nasceu da visão de entregar soluções técnicas completas com responsabilidade, inovação e compromisso com cada cliente.</p>
     <p>Nossa equipe multidisciplinar atua em projetos residenciais, comerciais e industriais — sempre com foco em qualidade, segurança e prazo.</p>
     <div class="diferenciais">
       <div class="diferencial">
         <span class="diferencial-icon">🏅</span>
-        <div>
-          <h4>Equipe Certificada</h4>
-          <p>Profissionais com registros ativos no CREA</p>
-        </div>
+        <div><h4>Equipe Certificada</h4><p>Profissionais com registros ativos no CREA</p></div>
       </div>
       <div class="diferencial">
         <span class="diferencial-icon">⏱️</span>
-        <div>
-          <h4>Prazo Cumprido</h4>
-          <p>Cronogramas respeitados em cada etapa</p>
-        </div>
+        <div><h4>Prazo Cumprido</h4><p>Cronogramas respeitados em cada etapa</p></div>
       </div>
       <div class="diferencial">
         <span class="diferencial-icon">🛡️</span>
-        <div>
-          <h4>Garantia de Serviço</h4>
-          <p>Todos os serviços com garantia formal</p>
-        </div>
+        <div><h4>Garantia de Serviço</h4><p>Todos os serviços com garantia formal</p></div>
       </div>
       <div class="diferencial">
         <span class="diferencial-icon">📍</span>
-        <div>
-          <h4>Atendimento Local</h4>
-          <p>Presença e agilidade na sua região</p>
-        </div>
+        <div><h4>Atendimento Local</h4><p>Presença e agilidade em São Bernardo do Campo</p></div>
       </div>
     </div>
   </div>
   <div class="sobre-visual">
-    <div class="sobre-visual-inner">
-      <div class="sobre-logo-placeholder">MARS</div>
-    </div>
+    <div class="sobre-logo-placeholder">MARS</div>
     <div class="sobre-badge">
       <strong>LTDA.</strong>
       <span>Empresa Registrada</span>
@@ -1055,209 +545,83 @@
     <h2>Portfólio de Projetos</h2>
     <p>Cada obra conta uma história. Veja o que já entregamos.</p>
   </div>
-
   <div class="portfolio-filters">
-    <button class="filter-btn active" onclick="filterPortfolio('todos', this)">Todos</button>
-    <button class="filter-btn" onclick="filterPortfolio('eletrica', this)">Elétrica</button>
-    <button class="filter-btn" onclick="filterPortfolio('hidraulica', this)">Hidráulica</button>
-    <button class="filter-btn" onclick="filterPortfolio('cameras', this)">Câmeras</button>
-    <button class="filter-btn" onclick="filterPortfolio('reforma', this)">Reformas</button>
-    <button class="filter-btn" onclick="filterPortfolio('projeto', this)">Projetos</button>
+    <button class="filter-btn active" onclick="filterPortfolio('todos',this)">Todos</button>
+    <button class="filter-btn" onclick="filterPortfolio('eletrica',this)">Elétrica</button>
+    <button class="filter-btn" onclick="filterPortfolio('hidraulica',this)">Hidráulica</button>
+    <button class="filter-btn" onclick="filterPortfolio('cameras',this)">Câmeras</button>
+    <button class="filter-btn" onclick="filterPortfolio('reforma',this)">Reformas</button>
+    <button class="filter-btn" onclick="filterPortfolio('projeto',this)">Projetos</button>
   </div>
-
   <div class="portfolio-grid" id="portfolioGrid">
 
-    <!-- Item 1 — Grande destaque -->
     <div class="portfolio-item large" data-categoria="eletrica">
-      <div class="portfolio-placeholder">
-        <span class="portfolio-placeholder-icon">⚡</span>
-        <span class="portfolio-placeholder-text">Adicione uma foto do projeto aqui</span>
-        <span class="portfolio-placeholder-tag">Instalação Elétrica</span>
-      </div>
-      <div class="portfolio-overlay">
-        <div class="portfolio-overlay-content">
-          <h4>Instalação Elétrica</h4>
-          <span>Residencial · São Bernardo do Campo</span>
-        </div>
-      </div>
+      <div class="portfolio-placeholder"><span class="portfolio-placeholder-icon">⚡</span><span class="portfolio-placeholder-text">Adicione uma foto do projeto aqui</span><span class="portfolio-placeholder-tag">Instalação Elétrica</span></div>
+      <div class="portfolio-overlay"><div class="portfolio-overlay-content"><h4>Instalação Elétrica</h4><span>Residencial · São Bernardo do Campo</span></div></div>
     </div>
 
-    <!-- Item 2 -->
+    <div class="portfolio-item" data-categoria="cameras">
+      <div class="portfolio-placeholder"><span class="portfolio-placeholder-icon">📷</span><span class="portfolio-placeholder-text">Adicione uma foto do projeto aqui</span><span class="portfolio-placeholder-tag">Câmeras de Segurança</span></div>
+      <div class="portfolio-overlay"><div class="portfolio-overlay-content"><h4>Sistema CFTV</h4><span>Comercial · São Bernardo do Campo</span></div></div>
+    </div>
+
     <div class="portfolio-item" data-categoria="hidraulica">
-      <div class="portfolio-placeholder">
-        <span class="portfolio-placeholder-icon">🔧</span>
-        <span class="portfolio-placeholder-text">Adicione uma foto do projeto aqui</span>
-        <span class="portfolio-placeholder-tag">Hidráulica</span>
-      </div>
-      <div class="portfolio-overlay">
-        <div class="portfolio-overlay-content">
-          <h4>Instalação Hidráulica</h4>
-          <span>Comercial · São Bernardo do Campo</span>
-        </div>
-      </div>
+      <div class="portfolio-placeholder"><span class="portfolio-placeholder-icon">🔧</span><span class="portfolio-placeholder-text">Adicione uma foto do projeto aqui</span><span class="portfolio-placeholder-tag">Hidráulica</span></div>
+      <div class="portfolio-overlay"><div class="portfolio-overlay-content"><h4>Instalação Hidráulica</h4><span>Comercial · São Bernardo do Campo</span></div></div>
     </div>
 
-    <!-- Item 3 -->
-    <div class="portfolio-item" data-categoria="eletrica">
-      <div class="portfolio-placeholder">
-        <span class="portfolio-placeholder-icon">⚡</span>
-        <span class="portfolio-placeholder-text">Adicione uma foto do projeto aqui</span>
-        <span class="portfolio-placeholder-tag">Instalação Elétrica</span>
-      </div>
-      <div class="portfolio-overlay">
-        <div class="portfolio-overlay-content">
-          <h4>Quadro de Distribuição</h4>
-          <span>Industrial · São Bernardo do Campo</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Item 4 — Câmeras Grande destaque -->
     <div class="portfolio-item large" data-categoria="cameras">
-      <div class="portfolio-placeholder">
-        <span class="portfolio-placeholder-icon">📷</span>
-        <span class="portfolio-placeholder-text">Adicione uma foto do projeto aqui</span>
-        <span class="portfolio-placeholder-tag">Câmeras de Segurança</span>
-      </div>
-      <div class="portfolio-overlay">
-        <div class="portfolio-overlay-content">
-          <h4>Sistema CFTV Completo</h4>
-          <span>Comercial · São Bernardo do Campo</span>
-        </div>
-      </div>
+      <div class="portfolio-placeholder"><span class="portfolio-placeholder-icon">📷</span><span class="portfolio-placeholder-text">Adicione uma foto do projeto aqui</span><span class="portfolio-placeholder-tag">Câmeras de Segurança</span></div>
+      <div class="portfolio-overlay"><div class="portfolio-overlay-content"><h4>Monitoramento Residencial</h4><span>Residencial · São Bernardo do Campo</span></div></div>
     </div>
 
-    <!-- Item 5 — Câmeras -->
+    <div class="portfolio-item" data-categoria="eletrica">
+      <div class="portfolio-placeholder"><span class="portfolio-placeholder-icon">⚡</span><span class="portfolio-placeholder-text">Adicione uma foto do projeto aqui</span><span class="portfolio-placeholder-tag">Instalação Elétrica</span></div>
+      <div class="portfolio-overlay"><div class="portfolio-overlay-content"><h4>Quadro de Distribuição</h4><span>Industrial · São Bernardo do Campo</span></div></div>
+    </div>
+
     <div class="portfolio-item" data-categoria="cameras">
-      <div class="portfolio-placeholder">
-        <span class="portfolio-placeholder-icon">📷</span>
-        <span class="portfolio-placeholder-text">Adicione uma foto do projeto aqui</span>
-        <span class="portfolio-placeholder-tag">Câmeras de Segurança</span>
-      </div>
-      <div class="portfolio-overlay">
-        <div class="portfolio-overlay-content">
-          <h4>Monitoramento Residencial</h4>
-          <span>Residencial · São Bernardo do Campo</span>
-        </div>
-      </div>
+      <div class="portfolio-placeholder"><span class="portfolio-placeholder-icon">📷</span><span class="portfolio-placeholder-text">Adicione uma foto do projeto aqui</span><span class="portfolio-placeholder-tag">Câmeras de Segurança</span></div>
+      <div class="portfolio-overlay"><div class="portfolio-overlay-content"><h4>Câmeras IP Industrial</h4><span>Industrial · São Bernardo do Campo</span></div></div>
     </div>
 
-    <!-- Item 6 — Câmeras -->
-    <div class="portfolio-item" data-categoria="cameras">
-      <div class="portfolio-placeholder">
-        <span class="portfolio-placeholder-icon">📷</span>
-        <span class="portfolio-placeholder-text">Adicione uma foto do projeto aqui</span>
-        <span class="portfolio-placeholder-tag">Câmeras de Segurança</span>
-      </div>
-      <div class="portfolio-overlay">
-        <div class="portfolio-overlay-content">
-          <h4>Câmeras IP Industrial</h4>
-          <span>Industrial · São Bernardo do Campo</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Item 7 -->
     <div class="portfolio-item" data-categoria="reforma">
-      <div class="portfolio-placeholder">
-        <span class="portfolio-placeholder-icon">🔨</span>
-        <span class="portfolio-placeholder-text">Adicione uma foto do projeto aqui</span>
-        <span class="portfolio-placeholder-tag">Reforma</span>
-      </div>
-      <div class="portfolio-overlay">
-        <div class="portfolio-overlay-content">
-          <h4>Reforma e Acabamento</h4>
-          <span>Residencial · São Bernardo do Campo</span>
-        </div>
-      </div>
+      <div class="portfolio-placeholder"><span class="portfolio-placeholder-icon">🔨</span><span class="portfolio-placeholder-text">Adicione uma foto do projeto aqui</span><span class="portfolio-placeholder-tag">Reforma</span></div>
+      <div class="portfolio-overlay"><div class="portfolio-overlay-content"><h4>Reforma e Acabamento</h4><span>Residencial · São Bernardo do Campo</span></div></div>
     </div>
 
-    <!-- Item 8 — Projeto Grande destaque -->
     <div class="portfolio-item large" data-categoria="projeto">
-      <div class="portfolio-placeholder">
-        <span class="portfolio-placeholder-icon">📐</span>
-        <span class="portfolio-placeholder-text">Adicione uma foto do projeto aqui</span>
-        <span class="portfolio-placeholder-tag">Projeto de Engenharia</span>
-      </div>
-      <div class="portfolio-overlay">
-        <div class="portfolio-overlay-content">
-          <h4>Projeto de Engenharia</h4>
-          <span>Comercial · São Bernardo do Campo</span>
-        </div>
-      </div>
+      <div class="portfolio-placeholder"><span class="portfolio-placeholder-icon">📐</span><span class="portfolio-placeholder-text">Adicione uma foto do projeto aqui</span><span class="portfolio-placeholder-tag">Projeto de Engenharia</span></div>
+      <div class="portfolio-overlay"><div class="portfolio-overlay-content"><h4>Projeto de Engenharia</h4><span>Comercial · São Bernardo do Campo</span></div></div>
     </div>
 
-    <!-- Item 9 -->
     <div class="portfolio-item" data-categoria="hidraulica">
-      <div class="portfolio-placeholder">
-        <span class="portfolio-placeholder-icon">🔧</span>
-        <span class="portfolio-placeholder-text">Adicione uma foto do projeto aqui</span>
-        <span class="portfolio-placeholder-tag">Hidráulica</span>
-      </div>
-      <div class="portfolio-overlay">
-        <div class="portfolio-overlay-content">
-          <h4>Rede Hidráulica</h4>
-          <span>Residencial · São Bernardo do Campo</span>
-        </div>
-      </div>
+      <div class="portfolio-placeholder"><span class="portfolio-placeholder-icon">🔧</span><span class="portfolio-placeholder-text">Adicione uma foto do projeto aqui</span><span class="portfolio-placeholder-tag">Hidráulica</span></div>
+      <div class="portfolio-overlay"><div class="portfolio-overlay-content"><h4>Rede Hidráulica</h4><span>Residencial · São Bernardo do Campo</span></div></div>
     </div>
 
-    <!-- Item 10 -->
     <div class="portfolio-item" data-categoria="projeto">
-      <div class="portfolio-placeholder">
-        <span class="portfolio-placeholder-icon">🔍</span>
-        <span class="portfolio-placeholder-text">Adicione uma foto do projeto aqui</span>
-        <span class="portfolio-placeholder-tag">Laudo / Vistoria</span>
-      </div>
-      <div class="portfolio-overlay">
-        <div class="portfolio-overlay-content">
-          <h4>Laudo Técnico</h4>
-          <span>Residencial · São Bernardo do Campo</span>
-        </div>
-      </div>
+      <div class="portfolio-placeholder"><span class="portfolio-placeholder-icon">🔍</span><span class="portfolio-placeholder-text">Adicione uma foto do projeto aqui</span><span class="portfolio-placeholder-tag">Laudo / Vistoria</span></div>
+      <div class="portfolio-overlay"><div class="portfolio-overlay-content"><h4>Laudo Técnico</h4><span>Residencial · São Bernardo do Campo</span></div></div>
     </div>
 
   </div>
-
-  <p class="portfolio-hint">
-    📸 <strong>Para adicionar suas fotos:</strong> substitua cada bloco de placeholder pela tag
-    <code style="background:#1a1a1a; padding:0.1rem 0.4rem; border-radius:2px; color:#C0392B;">&lt;img src="sua-foto.jpg" class="portfolio-img" alt="descrição"&gt;</code>
-  </p>
+  <p class="portfolio-hint">📸 <strong>Para adicionar suas fotos:</strong> substitua cada bloco de placeholder pela tag <code style="background:#1a1a1a;padding:0.1rem 0.4rem;border-radius:2px;color:#C0392B;">&lt;img src="foto.jpg" class="portfolio-img" alt="descrição"&gt;</code></p>
 </section>
 
 <!-- PROCESSO -->
 <section class="processo" id="processo">
   <div class="section-header">
-    <span class="section-tag" style="border-color:#9B1C1C; color:#C0392B;">Como trabalhamos</span>
+    <span class="section-tag" style="border-color:#9B1C1C;color:#C0392B;">Como trabalhamos</span>
     <h2>Do Contato à Entrega</h2>
-    <p style="color:#888">Processo transparente e organizado em cada projeto.</p>
+    <p>Processo transparente e organizado em cada projeto.</p>
   </div>
   <div class="processo-steps">
-    <div class="step">
-      <div class="step-num">01</div>
-      <h4>Contato</h4>
-      <p>Você nos chama pelo WhatsApp ou formulário com detalhes do projeto.</p>
-    </div>
-    <div class="step">
-      <div class="step-num">02</div>
-      <h4>Visita Técnica</h4>
-      <p>Agendamos visita gratuita para avaliação detalhada do local.</p>
-    </div>
-    <div class="step">
-      <div class="step-num">03</div>
-      <h4>Proposta</h4>
-      <p>Orçamento claro, sem surpresas. Prazo e valores definidos.</p>
-    </div>
-    <div class="step">
-      <div class="step-num">04</div>
-      <h4>Execução</h4>
-      <p>Equipe qualificada em campo com acompanhamento e relatórios.</p>
-    </div>
-    <div class="step">
-      <div class="step-num">05</div>
-      <h4>Entrega</h4>
-      <p>Vistoria final, documentação e suporte pós-obra garantido.</p>
-    </div>
+    <div class="step"><div class="step-num">01</div><h4>Contato</h4><p>Você nos chama pelo WhatsApp ou formulário com detalhes do projeto.</p></div>
+    <div class="step"><div class="step-num">02</div><h4>Visita Técnica</h4><p>Agendamos visita gratuita para avaliação detalhada do local.</p></div>
+    <div class="step"><div class="step-num">03</div><h4>Proposta</h4><p>Orçamento claro, sem surpresas. Prazo e valores definidos.</p></div>
+    <div class="step"><div class="step-num">04</div><h4>Execução</h4><p>Equipe qualificada em campo com acompanhamento e relatórios.</p></div>
+    <div class="step"><div class="step-num">05</div><h4>Entrega</h4><p>Vistoria final, documentação e suporte pós-obra garantido.</p></div>
   </div>
 </section>
 
@@ -1273,37 +637,19 @@
       <div class="depo-quote">"</div>
       <div class="depo-stars">★★★★★</div>
       <p class="depo-text">Excelente atendimento do início ao fim. A equipe da MARS foi pontual, organizada e entregou nossa reforma muito antes do prazo. Recomendo sem hesitar.</p>
-      <div class="depo-author">
-        <div class="depo-avatar">RC</div>
-        <div>
-          <div class="depo-name">Roberto C.</div>
-          <div class="depo-role">Proprietário residencial</div>
-        </div>
-      </div>
+      <div class="depo-author"><div class="depo-avatar">RC</div><div><div class="depo-name">Roberto C.</div><div class="depo-role">Proprietário residencial</div></div></div>
     </div>
     <div class="depo-card">
       <div class="depo-quote">"</div>
       <div class="depo-stars">★★★★★</div>
-      <p class="depo-text">Contratei a MARS para a instalação elétrica do nosso escritório. Profissionalismo impecável, laudo entregue rapidamente e preço muito justo. Nota 10.</p>
-      <div class="depo-author">
-        <div class="depo-avatar">AM</div>
-        <div>
-          <div class="depo-name">Ana M.</div>
-          <div class="depo-role">Empresária</div>
-        </div>
-      </div>
+      <p class="depo-text">Contratei a MARS para a instalação elétrica e câmeras do nosso escritório. Profissionalismo impecável, laudo entregue rapidamente e preço muito justo.</p>
+      <div class="depo-author"><div class="depo-avatar">AM</div><div><div class="depo-name">Ana M.</div><div class="depo-role">Empresária</div></div></div>
     </div>
     <div class="depo-card">
       <div class="depo-quote">"</div>
       <div class="depo-stars">★★★★★</div>
       <p class="depo-text">Desde o orçamento até a entrega, tudo muito transparente. A obra saiu dentro do valor combinado e com qualidade muito acima do esperado. Já indiquei para amigos.</p>
-      <div class="depo-author">
-        <div class="depo-avatar">FS</div>
-        <div>
-          <div class="depo-name">Felipe S.</div>
-          <div class="depo-role">Cliente comercial</div>
-        </div>
-      </div>
+      <div class="depo-author"><div class="depo-avatar">FS</div><div><div class="depo-name">Felipe S.</div><div class="depo-role">Cliente comercial</div></div></div>
     </div>
   </div>
 </section>
@@ -1313,7 +659,7 @@
   <h2>Pronto para Iniciar<br>seu Projeto?</h2>
   <p>Fale com a MARS hoje. Visita técnica gratuita e orçamento sem compromisso.</p>
   <div class="cta-btns">
-    <a href="https://wa.me/5511964563416?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20da%20MARS." class="btn-white" target="_blank">💬 Falar no WhatsApp</a>
+    <a href="https://wa.me/5511964563416?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20da%20MARS." target="_blank" class="btn-white">💬 Falar no WhatsApp</a>
     <a href="#contato" class="btn-outline-white">📋 Preencher Formulário</a>
   </div>
 </section>
@@ -1324,7 +670,11 @@
     <h2>Entre em<br><span>Contato</span></h2>
     <p>Preencha o formulário ou fale diretamente conosco. Nossa equipe responde em até 24 horas.</p>
     <div class="contato-items">
-      <a href="https://wa.me/11964563416?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20da%20MARS." target="_blank" class="contato-item" style="text-decoration:none; cursor:pointer; transition: transform 0.2s, box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 20px rgba(37,211,102,0.2)';this.style.borderLeftColor='#25D366'" onmouseout="this.style.transform='';this.style.boxShadow='';this.style.borderLeftColor=''">
+
+      <a href="https://wa.me/5511964563416?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20da%20MARS."
+         target="_blank" class="contato-item"
+         onmouseover="this.style.borderLeftColor='#25D366'"
+         onmouseout="this.style.borderLeftColor=''">
         <span class="contato-item-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         </span>
@@ -1333,59 +683,41 @@
           <p style="font-weight:600;">(11) 96456-3416 — Clique para chamar</p>
         </div>
       </a>
-      <div class="contato-item">
+
+      <a href="mailto:marsengenhariaeletrica@gmail.com" class="contato-item">
         <span class="contato-item-icon">📧</span>
-        <div>
-          <h4>E-mail</h4>
-          <p>marsengenhariaeletrica@gmail.com</p>
-        </div>
-      </div>
+        <div><h4>E-mail</h4><p>marsengenhariaeletrica@gmail.com</p></div>
+      </a>
+
       <div class="contato-item">
         <span class="contato-item-icon">📍</span>
-        <div>
-          <h4>Localização</h4>
-          <p>Baeta Neves, São Bernardo do Campo — SP</p>
-        </div>
+        <div><h4>Localização</h4><p>Baeta Neves, São Bernardo do Campo — SP</p></div>
       </div>
+
       <div class="contato-item">
         <span class="contato-item-icon">🕐</span>
-        <div>
-          <h4>Horário</h4>
-          <p>Seg–Sex: 8h–18h | Sáb: 8h–12h</p>
-        </div>
+        <div><h4>Horário</h4><p>Seg–Sex: 8h–18h | Sáb: 8h–12h</p></div>
       </div>
     </div>
   </div>
 
+  <!-- FORMULÁRIO — compatível com GitHub Pages: envia via WhatsApp + abre email -->
   <div class="form-orcamento">
     <h3>Solicite seu <span>Orçamento</span></h3>
     <p>Visita técnica gratuita. Resposta em até 24 horas.</p>
 
-    <!-- Mensagem de sucesso (oculta por padrão) -->
-    <div id="formSucesso" style="display:none; text-align:center; padding:2rem 1rem;">
-      <div style="font-size:3rem; margin-bottom:1rem;">✅</div>
-      <h4 style="font-family:'Barlow Condensed',sans-serif; font-size:1.5rem; font-weight:800; text-transform:uppercase; color:#2C2C2C; margin-bottom:0.5rem;">Solicitação Enviada!</h4>
-      <p style="color:#4A4A4A; font-size:0.95rem; line-height:1.7; margin-bottom:1.5rem;">Seu pedido foi registrado e enviado para nossa equipe.<br>Clique abaixo para continuar pelo WhatsApp e agilizar seu atendimento!</p>
-      <a id="btnWhatsAppSucesso" href="#" target="_blank" class="btn-form" style="display:inline-flex; text-decoration:none; width:auto; padding:1rem 2rem; border-radius:3px; background:#25D366; margin-bottom:0.75rem;">
-        💬 Continuar pelo WhatsApp
+    <div id="formSucesso">
+      <div class="sucesso-icon">✅</div>
+      <h4>Solicitação Enviada!</h4>
+      <p>Seu pedido foi registrado.<br>Clique abaixo para continuar pelo WhatsApp e agilizar seu atendimento.</p>
+      <a id="btnWhatsAppSucesso" href="#" target="_blank" class="btn-wa-sucesso">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Continuar pelo WhatsApp
       </a>
-      <br>
-      <small style="color:#888; font-size:0.78rem;">Uma cópia também foi enviada para marsengenhariaeletrica@gmail.com</small>
+      <br><small style="color:#888;font-size:0.76rem;display:block;margin-top:0.75rem;">Uma cópia também foi enviada para marsengenhariaeletrica@gmail.com</small>
     </div>
 
-    <!-- Formulário Netlify -->
-    <form
-      id="formOrcamento"
-      name="orcamento-mars"
-      method="POST"
-      data-netlify="true"
-      data-netlify-honeypot="bot-field"
-      onsubmit="enviarFormulario(event)"
-    >
-      <!-- Campo anti-spam obrigatório do Netlify -->
-      <input type="hidden" name="form-name" value="orcamento-mars">
-      <p style="display:none;"><label>Não preencha: <input name="bot-field"></label></p>
-
+    <form id="formOrcamento" onsubmit="enviarOrcamento(event)">
       <div class="form-row">
         <div class="form-group">
           <label for="nome">Nome completo *</label>
@@ -1406,6 +738,7 @@
           <option value="">Selecione o serviço...</option>
           <option>Instalações Elétricas</option>
           <option>Instalações Hidráulicas</option>
+          <option>Câmeras de Segurança</option>
           <option>Reforma e Acabamentos</option>
           <option>Projeto de Engenharia</option>
           <option>Laudo / Vistoria</option>
@@ -1424,89 +757,19 @@
   </div>
 </section>
 
-<script>
-  async function enviarFormulario(e) {
-    e.preventDefault();
-    const form = document.getElementById('formOrcamento');
-    const btnTexto = document.getElementById('btnTexto');
-    const btnLoading = document.getElementById('btnLoading');
-    const btnEnviar = document.getElementById('btnEnviar');
-
-    // Capturar dados do formulário
-    const nome     = document.getElementById('nome').value.trim();
-    const whatsapp = document.getElementById('whatsapp').value.trim();
-    const email    = document.getElementById('email').value.trim();
-    const servico  = document.getElementById('servico').value.trim();
-    const mensagem = document.getElementById('mensagem').value.trim();
-
-    // Mostrar loading
-    btnTexto.style.display = 'none';
-    btnLoading.style.display = 'inline';
-    btnEnviar.disabled = true;
-
-    // Montar mensagem do WhatsApp com todos os dados
-    const msgWhats = 
-`Olá, MARS! Vim pelo site e gostaria de solicitar um orçamento. 📋
-
-*Nome:* ${nome}
-*WhatsApp:* ${whatsapp}
-*E-mail:* ${email || 'Não informado'}
-*Serviço:* ${servico}
-*Descrição:* ${mensagem || 'Não informado'}`;
-
-    const linkWhats = `https://wa.me/5511964563416?text=${encodeURIComponent(msgWhats)}`;
-
-    // Montar link mailto como fallback de e-mail
-    const assunto = encodeURIComponent(`Orçamento MARS — ${servico}`);
-    const corpo   = encodeURIComponent(
-`Nome: ${nome}
-WhatsApp: ${whatsapp}
-E-mail: ${email || 'Não informado'}
-Serviço: ${servico}
-Descrição: ${mensagem || 'Não informado'}`);
-    const linkEmail = `mailto:marsengenhariaeletrica@gmail.com?subject=${assunto}&body=${corpo}`;
-
-    // Atualizar botão WhatsApp na tela de sucesso
-    document.getElementById('btnWhatsAppSucesso').href = linkWhats;
-
-    // Enviar para Netlify Forms (funciona apenas quando publicado)
-    try {
-      const formData = new FormData(form);
-      await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData).toString()
-      });
-    } catch (err) {
-      // Netlify processa no servidor, continuar normalmente
-    }
-
-    // Abrir e-mail automaticamente
-    window.location.href = linkEmail;
-
-    // Aguardar 1s e abrir WhatsApp em nova aba
-    setTimeout(() => {
-      window.open(linkWhats, '_blank');
-    }, 800);
-
-    // Mostrar tela de sucesso
-    form.style.display = 'none';
-    document.getElementById('formSucesso').style.display = 'block';
-  }
-</script>
-
 <!-- FOOTER -->
 <footer>
   <div class="footer-top">
     <div class="footer-brand">
       <div class="footer-logo">M<span>A</span>RS</div>
-      <p>MARS Serviços e Soluções Ltda. — Construindo Soluções Sólidas. Projetando o Futuro.<br>Baeta Neves, São Bernardo do Campo — SP<br><span style="font-size:0.78rem; color:#555;">CNPJ: 62.021.646/0001-02</span></p>
+      <p>MARS Serviços e Soluções Ltda.<br>Construindo Soluções Sólidas. Projetando o Futuro.<br>Baeta Neves, São Bernardo do Campo — SP<br><span style="font-size:0.76rem;color:#444;">CNPJ: 62.021.646/0001-02</span></p>
     </div>
     <div class="footer-col">
       <h4>Serviços</h4>
       <ul>
         <li><a href="#servicos">Instalações Elétricas</a></li>
         <li><a href="#servicos">Instalações Hidráulicas</a></li>
+        <li><a href="#servicos">Câmeras de Segurança</a></li>
         <li><a href="#servicos">Reformas</a></li>
         <li><a href="#servicos">Projetos de Engenharia</a></li>
         <li><a href="#servicos">Laudos e Vistorias</a></li>
@@ -1516,48 +779,91 @@ Descrição: ${mensagem || 'Não informado'}`);
       <h4>Empresa</h4>
       <ul>
         <li><a href="#sobre">Sobre nós</a></li>
+        <li><a href="#portfolio">Portfólio</a></li>
         <li><a href="#processo">Como trabalhamos</a></li>
         <li><a href="#depoimentos">Depoimentos</a></li>
-        <li><a href="#contato">Contato</a></li>
         <li><a href="#contato">Solicitar Orçamento</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
     <p>© 2025 <span>MARS Serviços e Soluções Ltda.</span> — CNPJ: 62.021.646/0001-02 — Todos os direitos reservados.</p>
-    <p>Desenvolvido com ❤️</p>
+    <p>São Bernardo do Campo — SP</p>
   </div>
 </footer>
 
-<!-- WHATSAPP FLOAT -->
-<a href="https://wa.me/5511964563416?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento." class="whatsapp-float" target="_blank" title="Fale no WhatsApp">
+<!-- WHATSAPP FLUTUANTE -->
+<a href="https://wa.me/5511964563416?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20da%20MARS."
+   class="whatsapp-float" target="_blank" title="Fale no WhatsApp">
   <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
   </svg>
 </a>
 
 <script>
-  function filterPortfolio(categoria, btn) {
-    // Update active button
+  // ── FILTRO PORTFÓLIO ──
+  function filterPortfolio(cat, btn) {
     document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-
-    // Filter items
     document.querySelectorAll('.portfolio-item').forEach(item => {
-      if (categoria === 'todos' || item.dataset.categoria === categoria) {
-        item.style.display = '';
-        item.style.animation = 'fadeUp 0.4s ease both';
-      } else {
-        item.style.display = 'none';
-      }
+      item.style.display = (cat === 'todos' || item.dataset.categoria === cat) ? '' : 'none';
     });
+  }
 
-    // Fix large items when filtering
-    document.querySelectorAll('.portfolio-item.large').forEach(item => {
-      if (item.style.display !== 'none') {
-        item.classList.add('large');
-      }
-    });
+  // ── FORMULÁRIO — GitHub Pages: WhatsApp + Email ──
+  function enviarOrcamento(e) {
+    e.preventDefault();
+
+    const nome     = document.getElementById('nome').value.trim();
+    const whatsapp = document.getElementById('whatsapp').value.trim();
+    const email    = document.getElementById('email').value.trim();
+    const servico  = document.getElementById('servico').value.trim();
+    const mensagem = document.getElementById('mensagem').value.trim();
+
+    // Loading
+    document.getElementById('btnTexto').style.display  = 'none';
+    document.getElementById('btnLoading').style.display = 'inline';
+    document.getElementById('btnEnviar').disabled = true;
+
+    // Mensagem WhatsApp formatada
+    const msgWA =
+`🔧 *Novo pedido de orçamento — Site MARS*
+
+👤 *Nome:* ${nome}
+📱 *WhatsApp:* ${whatsapp}
+📧 *E-mail:* ${email || 'Não informado'}
+🛠️ *Serviço:* ${servico}
+📝 *Descrição:* ${mensagem || 'Não informado'}`;
+
+    const linkWA = `https://wa.me/5511964563416?text=${encodeURIComponent(msgWA)}`;
+
+    // E-mail formatado
+    const assunto = `Orçamento MARS — ${servico} — ${nome}`;
+    const corpo =
+`Novo pedido de orçamento recebido pelo site:
+
+Nome: ${nome}
+WhatsApp: ${whatsapp}
+E-mail: ${email || 'Não informado'}
+Serviço: ${servico}
+Descrição: ${mensagem || 'Não informado'}`;
+
+    const linkEmail = `mailto:marsengenhariaeletrica@gmail.com?subject=${encodeURIComponent(assunto)}&body=${encodeURIComponent(corpo)}`;
+
+    // Atualizar botão da tela de sucesso
+    document.getElementById('btnWhatsAppSucesso').href = linkWA;
+
+    // Abrir e-mail imediatamente
+    window.location.href = linkEmail;
+
+    // Abrir WhatsApp após 1s (dá tempo do email abrir)
+    setTimeout(() => window.open(linkWA, '_blank'), 1000);
+
+    // Mostrar tela de sucesso
+    setTimeout(() => {
+      document.getElementById('formOrcamento').style.display = 'none';
+      document.getElementById('formSucesso').style.display = 'block';
+    }, 600);
   }
 </script>
 
